@@ -3,3 +3,118 @@ Base is 8
 10,11,12,13,14,15,16,17
 20,21,22,23,24,25,26,27
 30,31,32,33,34,35,36,37
+40,41,42
+
+....
+70,77,72,73,74,75,76,77
+100,101
+
+
+33+7  =42
+77 + 1 =100
+
+
+56 + 44 = 122
+
+Byte pairing algorithm .
+one of byte pairing is Tik  token
+it convert base 64
+
+
+Invent your own number system and do addition, subtraction, multiply and divisio'''
+1 2   3
+2 4   7
+3 6  12
+4 10  
+5 12
+6 14
+7 16
+
+
+in your number system that is 8 base
+1 -> 1
+10 -> 8
+20 -> 16
+30 -> 24
+
+100 ->64
+300 -> 3*64
+
+what is 123 in base 8
+123 = 100+20+3
+    = 64 +  2*8 +3
+    = 64 + 16 + 3
+
+
+how to subtarct digits  from a number by getting percentile -
+
+// devision by 
+% gives reminder
+
+def last_digit(num):
+l= num%10
+num =  num//10
+return l,num
+
+last_digit(123)
+(3,12)
+
+num = 1234
+mul = 1
+val = 0
+l,num = last_digit(num)
+val+=l*num
+print(val)
+mul=mul*8
+l,num =  last_digit(num)
+val+=l*mul
+print(val)
+mul=mul*8
+l,num =  last_digit(num)
+val+=l*mul
+print(val)
+mul=mul*8
+l,num =  last_digit(num)
+val+=l*mul
+print(val)
+
+
+
+def convert_base8(num,mul=1):
+if num == 0:
+  return 0
+l,num=last_digit(num)
+val = 1*mul
+mul=mul*8
+v= vonvert_base(num,mul)
+return val+v
+
+
+or
+most important recursive function :-
+
+def convert_base8(num):
+if num == 0:
+  return 0
+l,num=last_digit(num)
+v= convert_base(num)
+return l+8*v
+
+1234  -> 123 ->12 ->1 ->0
+
+1234 -> 123/4
+     -> 12/3/4
+     ->1/2/3/4
+    ->0/1/2/3/4
+      -> 0+1 =1
+        12  -> 1*8+2 =10
+        123  -> 12->10 *8 + 3=83
+        1234  -> 123 -> 83 *8 +4 = 664+4 = 668
+
+
+
+
+
+
+
+
