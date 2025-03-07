@@ -111,6 +111,29 @@ return l+8*v
         123  -> 12->10 *8 + 3=83
         1234  -> 123 -> 83 *8 +4 = 664+4 = 668
 
+convert base n to base m
+check it we also need to change l to basea
+ base 1 = n, base 2=m
+def convert_any_base(num,base1,base2):
+if num == 0:
+  return 0
+l,num = num % base2, num//base2
+v = convert_any_base(num)
+return l+base1*v
+
+
+Important
+
+to represent n number , how many digit do we need in base 10
+
+let us assume it is d then
+10 to the power is d the n
+ao to the power d is n
+it means
+d= log(n) of base 10
+
+log is a way to count zero(0)
+
 
 
 
