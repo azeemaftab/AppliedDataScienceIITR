@@ -149,5 +149,63 @@ slope of a line
 
 
 
+...........
+m=1 , n=0
+""
 
+m=2, n=1
+0
+1
+
+m=2 , n=2
+00
+01
+10
+11
+
+m=2 . n=3
+0 00
+0 01
+0 10
+0 11
+1 00
+1 01
+1 10
+1 11
+m=2 
+
+print all combination between 0 to m-1
+
+
+def printnums(n,m)
+    if n==0:
+    return [""]
+perms =  printnums(n-1,m)
+result = []
+for mn in range(m):
+    for perm in perms:
+    result.append(str(mn) + perm)
+return result
+
+
+
+star pattern revert
+
+
+def printtriangle(n):
+for i in range(n,0,-1)
+    print(" " * (n-i) + "* "*i)
+
+
+def print_start_rec(n,space='')
+if n == 0:
+    return
+print(spaces + "* " *n)
+print_star_rec(n-1,' ' + spaces)
+
+.............
+print fibnacci
+
+Recursion  == Mathematical induction
+read  mathematical induction
 
